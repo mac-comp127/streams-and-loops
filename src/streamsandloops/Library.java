@@ -10,7 +10,11 @@ public class Library {
     private final List<Book> books;
 
     public Library(List<Book> books) {
-        this.books = books;
+        this.books = List.copyOf(books);
+    }
+
+    public List<Book> getAllBooks() {
+        return books;
     }
 
     /**

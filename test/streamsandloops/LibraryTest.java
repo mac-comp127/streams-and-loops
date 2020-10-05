@@ -2,6 +2,7 @@ package streamsandloops;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
 
@@ -121,6 +122,10 @@ class LibraryTest {
         assertEquals(
             List.of(country_between_us, moon_crossing),
             library.findShortestBooks(2));
+
+        assertEquals(
+            library.getAllBooks().size(),
+            library.findShortestBooks(500).size());
 
         assertEquals(
             List.of(),
