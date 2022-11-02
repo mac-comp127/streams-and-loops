@@ -20,7 +20,17 @@ public class LibrarySolution {
         return books.stream()
             .filter(book -> book.getAuthor().equals(authorName))
             .map(Book::getTitle)
-            .collect(toList());
+            .toList();
+        
+        // Note: You can also say .collect(toList()) instead of .toList()
+        // and it means the same thing. The longer way is the older way;
+        // Java version 16 added the shortcut.
+        //
+        // It is good to know about the .collect(...) method, because it
+        // gives you more ways of collecting results than just putting
+        // them in a list. It is so common to collect to a list that
+        // there is a special shortcut just for that one choice, but it
+        // is not the only choice!
     }
 
     /**
@@ -43,7 +53,7 @@ public class LibrarySolution {
         return books.stream()
             .filter(d -> d.getGenres().contains(genre))
             .map(d -> d.getTitle() + " by " + d.getAuthor())
-            .collect(toList());
+            .toList();
     }
 
     /**
@@ -71,7 +81,7 @@ public class LibrarySolution {
         return books.stream()
             .filter(book -> book.getGenres().contains(genre))
             .sorted(Comparator.comparing(Book::getPageCount))
-            .collect(toList());
+            .toList();
     }
 
     /**

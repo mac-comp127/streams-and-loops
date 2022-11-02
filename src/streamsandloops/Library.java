@@ -37,7 +37,7 @@ public class Library {
         return books.stream()
             .filter(d -> d.getPageCount() > minPageCount)
             .map(Book::getTitle)
-            .collect(toList());
+            .toList();
     }
 
     /**
@@ -74,7 +74,7 @@ public class Library {
         return books.stream()
             .sorted(Comparator.comparing(Book::getPageCount))
             .limit(n)
-            .collect(toList());
+            .toList();
     }
 
     /**
