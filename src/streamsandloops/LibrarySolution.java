@@ -14,7 +14,7 @@ public class LibrarySolution {
     }
 
     /**
-     * Task 1: Finds the titles of all the books by the given author
+     * Task 1 SOLUTION: Finds the titles of all the books by the given author
      */
     public List<String> findTitlesByAuthor(String authorName) {
         return books.stream()
@@ -34,7 +34,7 @@ public class LibrarySolution {
     }
 
     /**
-     * Task 2: Find the titles of the books with more than the given minimum number of pages.
+     * Task 2 SOLUTION: Find the titles of the books with more than the given minimum number of pages.
      */
     public List<String> findTitlesOfLongBooks(int minPageCount) {
         List<String> list = new ArrayList<>();
@@ -47,7 +47,7 @@ public class LibrarySolution {
     }
 
     /**
-     * Task 3: Describes the titles and authors of all the books in the given genre.
+     * Task 3 SOLUTION: Describes the titles and authors of all the books in the given genre.
      */
     public List<String> findTitlesAndAuthorsInGenre(String genre) {
         return books.stream()
@@ -57,7 +57,7 @@ public class LibrarySolution {
     }
 
     /**
-     * Task 4: How many books in the given genre does the library have?
+     * Task 4 SOLUTION: How many books in the given genre does the library have?
      */
     public long countBooksInGenre(String genre) {
         return books.stream()
@@ -66,7 +66,7 @@ public class LibrarySolution {
     }
 
     /**
-     * Task 5: What are the n shortest books in the library?
+     * Task 5 SOLUTION: What are the n shortest books in the library?
      */
     public List<Book> findShortestBooks(int n) {
         List<Book> booksByLength = new ArrayList<>(books);
@@ -75,7 +75,7 @@ public class LibrarySolution {
     }
 
     /**
-     * Task 6: Finds all books in the given genre, sorted from shortest to longest.
+     * Task 6 SOLUTION: Finds all books in the given genre, sorted from shortest to longest.
      */
     public List<Book> findBooksInGenreSortedByLength(String genre) {
         return books.stream()
@@ -85,7 +85,7 @@ public class LibrarySolution {
     }
 
     /**
-     * Task 7: What is the book with the shortest title?
+     * Task 7 SOLUTION: What is the book with the shortest title?
      */
     public Book findBookWithShortestTitle() {
         Book winner = null;
@@ -100,7 +100,7 @@ public class LibrarySolution {
     }
 
     /**
-     * Prints all books in the library to STDOUT.
+     * Task 8 SOLUTION: Prints all books in the library to STDOUT.
      */
     public void printLibrary() {
         books.forEach(System.out::println);
